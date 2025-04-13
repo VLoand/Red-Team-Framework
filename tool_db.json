@@ -1,0 +1,137 @@
+{
+    "tools": [
+        {
+            "name": "Nmap",
+            "category": "Reconnaissance",
+            "command": "nmap",
+            "args": "-sV -T4 {target}",
+            "install": "https://nmap.org/download.html"
+        },
+        {
+            "name": "Metasploit",
+            "category": "Initial Access",
+            "command": "msfconsole",
+            "args": "-q -x \"use exploit/{module}; set RHOSTS {target}; run\"",
+            "install": "https://github.com/rapid7/metasploit-framework"
+        },
+        {
+            "name": "Sliver",
+            "category": "Execution",
+            "command": "sliver",
+            "args": "client --target {target}",
+            "install": "https://github.com/BishopFox/sliver"
+        },
+        {
+            "name": "GoPhish",
+            "category": "Initial Access",
+            "command": "gophish",
+            "args": "--config {config} --listen {target}",
+            "install": "https://github.com/gophish/gophish"
+        },
+        {
+            "name": "Modlishka",
+            "category": "Initial Access",
+            "command": "modlishka",
+            "args": "--config {config}",
+            "install": "https://github.com/drk1wi/Modlishka"
+        },
+        {
+            "name": "Rclone",
+            "category": "Execution",
+            "command": "rclone",
+            "args": "sync {source} {destination}",
+            "install": "https://rclone.org/downloads/"
+        },
+        {
+            "name": "Postman",
+            "category": "Execution",
+            "command": "postman",
+            "args": "",
+            "install": "https://www.postman.com/downloads/"
+        },
+        {
+            "name": "RDP",
+            "category": "Execution",
+            "command": "mstsc",
+            "args": "/v:{target}",
+            "install": "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients"
+        },
+        {
+            "name": "Discord",
+            "category": "Evasion",
+            "command": "discord",
+            "args": "",
+            "install": "https://discord.com/download"
+        },
+        {
+            "name": "Schtasks",
+            "category": "Evasion",
+            "command": "schtasks",
+            "args": "/Create /SC ONCE /TN {taskname} /TR \"{command}\" /ST {time}",
+            "install": "https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks"
+        },
+        {
+            "name": "ADS",
+            "category": "Evasion",
+            "command": "adsutil.vbs",
+            "args": "/* example command, adjust accordingly */",
+            "install": "https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/"
+        },
+        {
+            "name": "Cloakify",
+            "category": "Evasion",
+            "command": "cloakify",
+            "args": "{input} {output}",
+            "install": "https://github.com/ac-student/pycloakify"
+        },
+        {
+            "name": "Amass",
+            "category": "Reconnaissance",
+            "command": "amass",
+            "args": "enum -d {target}",
+            "install": "https://github.com/OWASP/Amass"
+        },
+        {
+            "name": "Shodan",
+            "category": "Reconnaissance",
+            "command": "shodan",
+            "args": "host {target}",
+            "install": "https://cli.shodan.io/"
+        },
+        {
+            "name": "Hunter.io",
+            "category": "Reconnaissance",
+            "command": "hunter",
+            "args": "domain {target}",
+            "install": "https://hunter.io/"
+        },
+        {
+            "name": "Evilginx2",
+            "category": "Initial Access",
+            "command": "evilginx2",
+            "args": "start {config}",
+            "install": "https://github.com/kgretzky/evilginx2"
+        },
+        {
+            "name": "BurpSuite",
+            "category": "Initial Access",
+            "command": "burpsuite",
+            "args": "",
+            "install": "https://portswigger.net/burp"
+        },
+        {
+            "name": "Mimikatz",
+            "category": "Initial Access",
+            "command": "mimikatz",
+            "args": "",
+            "install": "https://github.com/gentilkiwi/mimikatz"
+        },
+        {
+            "name": "Impacket",
+            "category": "Evasion",
+            "command": "psexec.py",
+            "args": "{target} -u {user} -p {pass}",
+            "install": "https://github.com/SecureAuthCorp/impacket"
+        }
+    ]
+}
