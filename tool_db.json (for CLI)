@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Nmap",
+    "command": "nmap",
+    "args": "-sV -T4 {target}",
+    "install": "https://nmap.org/download.html",
+    "paths": ["nmap", "/usr/bin/nmap"]
+  },
+  {
+    "name": "Metasploit",
+    "command": "msfconsole",
+    "args": "-q -x \"use exploit/{module}; set RHOSTS {target}; run\"",
+    "install": "https://github.com/rapid7/metasploit-framework",
+    "paths": ["msfconsole", "/usr/bin/msfconsole", "/opt/metasploit-framework/bin/msfconsole"]
+  },
+  {
+    "name": "Sliver",
+    "command": "sliver",
+    "args": "client --target {target}",
+    "install": "https://github.com/BishopFox/sliver",
+    "paths": ["sliver", "/usr/local/bin/sliver"]
+  },
+  {
+    "name": "GoPhish",
+    "command": "gophish",
+    "args": "--config {config} --listen {target}",
+    "install": "https://github.com/gophish/gophish",
+    "paths": ["gophish", "/usr/local/bin/gophish"]
+  },
+  {
+    "name": "Modlishka",
+    "command": "modlishka",
+    "args": "--config {config}",
+    "install": "https://github.com/drk1wi/Modlishka",
+    "paths": ["modlishka", "/usr/local/bin/modlishka"]
+  },
+  {
+    "name": "Rclone",
+    "command": "rclone",
+    "args": "sync {source} {destination}",
+    "install": "https://rclone.org/downloads/",
+    "paths": ["rclone", "/usr/bin/rclone", "/usr/local/bin/rclone"]
+  },
+  {
+    "name": "Postman",
+    "command": "postman",
+    "args": "",
+    "install": "https://www.postman.com/downloads/",
+    "paths": ["postman", "/usr/bin/postman", "/snap/bin/postman"]
+  },
+  {
+    "name": "RDP",
+    "command": "mstsc",
+    "args": "/v:{target}",
+    "install": "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients",
+    "paths": ["mstsc"]
+  },
+  {
+    "name": "Discord",
+    "command": "discord",
+    "args": "",
+    "install": "https://discord.com/download",
+    "paths": ["discord", "/usr/bin/discord"]
+  },
+  {
+    "name": "Schtasks",
+    "command": "schtasks",
+    "args": "/Create /SC ONCE /TN {taskname} /TR \"{command}\" /ST {time}",
+    "install": "https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks",
+    "paths": ["schtasks"]
+  },
+  {
+    "name": "ADS",
+    "command": "adsutil.vbs",
+    "args": "/* example command, adjust accordingly */",
+    "install": "https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/",
+    "paths": ["adsutil.vbs", "C:\\Windows\\System32\\inetsrv\\adsutil.vbs"]
+  },
+  {
+    "name": "Cloakify",
+    "command": "cloakify",
+    "args": "{input} {output}",
+    "install": "https://github.com/ac-student/pycloakify",
+    "paths": ["cloakify", "/usr/local/bin/cloakify"]
+  },
+  {
+    "name": "Amass",
+    "command": "amass",
+    "args": "enum -d {target}",
+    "install": "https://github.com/OWASP/Amass",
+    "paths": ["amass", "/usr/bin/amass", "/usr/local/bin/amass"]
+  },
+  {
+    "name": "Shodan",
+    "command": "shodan",
+    "args": "host {target}",
+    "install": "https://cli.shodan.io/",
+    "paths": ["shodan", "/usr/bin/shodan", "/usr/local/bin/shodan"]
+  },
+  {
+    "name": "Hunter.io",
+    "command": "hunter",
+    "args": "domain {target}",
+    "install": "https://hunter.io/",
+    "paths": ["hunter", "/usr/local/bin/hunter"]
+  },
+  {
+    "name": "Evilginx2",
+    "command": "evilginx2",
+    "args": "start {config}",
+    "install": "https://github.com/kgretzky/evilginx2",
+    "paths": ["evilginx2", "/usr/local/bin/evilginx2"]
+  },
+  {
+    "name": "BurpSuite",
+    "command": "burpsuite",
+    "args": "",
+    "install": "https://portswigger.net/burp",
+    "paths": ["burpsuite", "/usr/bin/burpsuite"]
+  },
+  {
+    "name": "Mimikatz",
+    "command": "mimikatz",
+    "args": "",
+    "install": "https://github.com/gentilkiwi/mimikatz",
+    "paths": ["mimikatz", "C:\\Tools\\mimikatz.exe"]
+  },
+  {
+    "name": "Impacket",
+    "command": "psexec.py",
+    "args": "{target} -u {user} -p {pass}",
+    "install": "https://github.com/SecureAuthCorp/impacket",
+    "paths": ["psexec.py", "/usr/local/bin/psexec.py"]
+  }
+]
+
